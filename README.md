@@ -4,17 +4,18 @@
 
 ### Front end
 
-+ vue js
-+ Tailwind
+- vue js
+- Tailwind
 
 ### Backend
-+ node.js
-+ Mongo DB
-+ Bootstrap
-+ Ejs
+
+- node.js
+- Mongo DB
+- Bootstrap
+- Ejs
 
 ### To do
 
-+ Optimiser les perf
-+ Optimiser le SEO
-+ Ajouter les events
+- Optimiser les perfs
+- Optimiser le SEO
+- Ajouter les events
