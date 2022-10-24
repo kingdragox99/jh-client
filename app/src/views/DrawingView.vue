@@ -53,7 +53,9 @@ export default {
   },
   methods: {
     async fetchData() {
-      const response = await fetch("http://admin-jh.dev-abc.xyz/api/drawing");
+      const response = await fetch(
+        "https://joyce-huberty-server.herokuapp.com/api/drawing"
+      );
       this.data = await response.json();
     },
   },

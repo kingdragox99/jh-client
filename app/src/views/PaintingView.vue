@@ -54,7 +54,7 @@ export default {
   methods: {
     async fetchData() {
       const response = await fetch(
-        "http://admin-jh.dev-abc.xyz/api/painting"
+        "https://joyce-huberty-server.herokuapp.com/api/painting"
       );
       this.data = await response.json();
     },
