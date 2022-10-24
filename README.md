@@ -19,3 +19,4 @@
 - Optimiser les perfs
 - Optimiser le SEO
 - Ajouter les events
+- 404 page
