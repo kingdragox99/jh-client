@@ -1,4 +1,5 @@
 <script setup>
+import SpinnerComponents from "@/components/SpinnerComponents.vue";
 const base64Arraybuffer = require("base64-arraybuffer");
 </script>
 
@@ -19,8 +20,18 @@ const base64Arraybuffer = require("base64-arraybuffer");
         </p>
       </div>
       <div class="flex flex-wrap md:-m-2 -m-1">
-        <div v-for="img in data" :key="img._id" class="md:p-2 p-1">
-          <div v-for="img in data" :key="img._id">
+        <div class="flex flex-wrap w-full justify-center content-center">
+          <div v-if="loading" class="md:p-2 p-1 w-[400px] h-[400px]">
+            <SpinnerComponents />
+          </div>
+          <div v-if="loading" class="md:p-2 p-1 w-[400px] h-[400px]">
+            <SpinnerComponents />
+          </div>
+          <div v-if="loading" class="md:p-2 p-1 w-[400px] h-[400px]">
+            <SpinnerComponents />
+          </div>
+          <div v-if="loading" class="md:p-2 p-1 w-[400px] h-[100px]"></div>
+          <div v-for="img in data" :key="img._id" class="md:p-2 p-1">
             <img
               class="w-[400px] object-cover h-[400px] object-center block"
               :src="
@@ -49,14 +60,17 @@ export default {
   data() {
     return {
       data: {},
+      loading: false,
     };
   },
   methods: {
     async fetchData() {
+      this.loading = true;
       const response = await fetch(
         "https://joyce-huberty-server.herokuapp.com/api/drawing"
       );
       this.data = await response.json();
+      this.loading = false;
     },
   },
   mounted() {
