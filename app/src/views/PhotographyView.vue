@@ -1,6 +1,5 @@
 <script setup>
 import SpinnerComponents from "@/components/SpinnerComponents.vue";
-const base64Arraybuffer = require("base64-arraybuffer");
 </script>
 
 <template>
@@ -34,10 +33,7 @@ const base64Arraybuffer = require("base64-arraybuffer");
           <div v-for="img in data" :key="img._id" class="md:p-2 p-1">
             <img
               class="w-[400px] object-cover h-[400px] object-center block"
-              :src="
-                'data:image/image/jpg;base64,' +
-                base64Arraybuffer.encode(img.img.data.data)
-              "
+              :src="img.img.data"
               alt="gallery"
             />
             <h2
